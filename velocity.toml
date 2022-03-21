@@ -1,0 +1,42 @@
+# Config version. Do not change this
+config-version = "1.0"
+bind = "0.0.0.0:25565"
+motd = "&3A Velocity Server"
+show-max-players = 500
+online-mode = true
+# - "none":   No forwarding will be done. All players will appear to be connecting from the
+#             proxy and will have offline-mode UUIDs.
+# - "legacy": Forward player IPs and UUIDs in a BungeeCord-compatible format. Use this if
+#             you run servers using Minecraft 1.12 or lower.
+# - "modern": Forward player IPs and UUIDs as part of the login process using Velocity's
+#             native forwarding. Only applicable for Minecraft 1.13 or higher.
+player-info-forwarding-mode = "NONE"
+forwarding-secret = "5L7eb15i6yie"
+announce-forge = false
+
+[servers]
+try = []
+
+[forced-hosts]
+
+[advanced]
+compression-threshold = 256
+compression-level = 6
+login-ratelimit = 3000
+connection-timeout = 5000
+read-timeout = 30000
+proxy-protocol = false
+
+[query]
+enabled = false
+port = 25577
+map = "Velocity"
+show-plugins = true
+
+[metrics]
+enabled = false
+
+# A unique, anonymous ID to identify this proxy with.
+id = "9cc04bee-691b-450b-94dc-5f5de5b6847b"
+
+log-failure = false
