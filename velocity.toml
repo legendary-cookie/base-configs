@@ -15,7 +15,8 @@ forwarding-secret = "5L7eb15i6yie"
 announce-forge = false
 
 [servers]
-try = []
+lobby = "127.0.0.1:6666"
+try = ["lobby"]
 
 [forced-hosts]
 
