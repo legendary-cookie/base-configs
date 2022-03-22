@@ -15,7 +15,9 @@ forwarding-secret = "5L7eb15i6yie"
 announce-forge = false
 
 [servers]
-try = []
+try = [
+  lobby
+]
 
 [forced-hosts]
 
