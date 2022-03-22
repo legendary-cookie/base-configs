@@ -52,9 +52,9 @@ settings:
       author: 8192
       page: 16384
   velocity-support:
-    enabled: false
-    online-mode: false
-    secret: ''
+    enabled: true
+    online-mode: true
+    secret: 'b4S3DS3Cr3T5'
   async-chunks:
     threads: -1
 messages:
