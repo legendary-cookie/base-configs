@@ -16,7 +16,7 @@ announce-forge = false
 
 [servers]
 try = [
-  lobby
+  "lobby"
 ]
 
 [forced-hosts]
