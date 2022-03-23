@@ -1,5 +1,5 @@
 redis:
-  enable: true # Setting it to true enables server name synchronization using Redis
+  enable: false # Setting it to true enables server name synchronization using Redis
   group-name: "production" # Name synchronization is performed only between servers with the same Redis server and the same group-name
   connection:
     hostname: "10.40.2.135"
