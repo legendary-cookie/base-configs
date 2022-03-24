@@ -1,6 +1,6 @@
 redis:
 # Setting this to true enables server name synchronization using Redis
-  enable: true
+  enable: false
 # Name synchronization is performed only between servers with the same Redis server and the same group-name
   group-name: "production"
   connection:
