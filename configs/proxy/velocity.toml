@@ -15,6 +15,8 @@ announce-forge = false
 # ELSE ERROR CAUSE CONF INVALID
 try = ["lobby"]
 
+[forced-hosts]
+
 [advanced]
 compression-threshold = 256
 compression-level = 6
