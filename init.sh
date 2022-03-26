@@ -15,7 +15,6 @@ export KUVEL_REDIS_PORT=${KUVEL_REDIS_PORT:-"6380"}
 export KUVEL_REDIS_USER=${KUVEL_REDIS_USER:-""}
 export KUVEL_REDIS_PASS=${KUVEL_REDIS_PASS:-""}
 
-
 mkdir -p /config /plugins
 
 if [ "$INIT_TYPE" = "proxy" ]; then
