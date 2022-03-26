@@ -1,10 +1,21 @@
 #!/bin/sh
-rawUrl="https://legendary-cookie.github.io/base-configs"
+function templ() {
+	local inFile="$1"
+	local outFile="$2"
+        envsubst < $inFile > $outFile
+}
+
+export MOTD=${MOTD:-"&3A Velocity Server"}
+
+mkdir -p /config /plugins
+
 if [ "$INIT_TYPE" = "proxy" ]; then
-    curl -fsSL -o /config/velocity.toml "${rawUrl}/velocity.toml"
-    mkdir -p /plugins/Kuvel
-    curl -fsSL -o /plugins/Kuvel/config.yml "${rawUrl}/kuvel-conf.yml"
+        mkdir -p /plugins/Kuvel
+	confDir="/src/configs/proxy"
+	templ $confDir/velocity.toml /config/velocity.toml
+	templ $confDir/kuvel-conf.yml /plugins/Kuvel/config.yml
 else
-    curl -fsSL -o /config/paper.yml "${rawUrl}/paper.yml"
-    curl -fsSL -o /config/spigot.yml "${rawUrl}/spigot.yml"
+	confDir="/src/configs/server"
+	templ $confDir/paper.yml /config/paper.yml
+	templ $confDir/spigot.yml /config/spigot.yml
 fi

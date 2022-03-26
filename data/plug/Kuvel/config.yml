@@ -1,0 +1,10 @@
+redis:
+# Setting this to true enables server name synchronization using Redis
+  enable: false
+# Name synchronization is performed only between servers with the same Redis server and the same group-name
+  group-name: "production"
+  connection:
+    hostname: "10.40.2.135"
+    port: 6380
+    username: ""
+    password: ""
