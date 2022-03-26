@@ -1,10 +1,10 @@
 redis:
 # Setting this to true enables server name synchronization using Redis
-  enable: false
+  enable: $KUVEL_REDIS_ENABLED
 # Name synchronization is performed only between servers with the same Redis server and the same group-name
-  group-name: "production"
+  group-name: "$KUVEL_REDIS_GROUP"
   connection:
-    hostname: "10.40.2.135"
-    port: 6380
-    username: ""
-    password: ""
+    hostname: "$KUVEL_REDIS_HOST"
+    port: $KUVEL_REDIS_PORT
+    username: "$KUVEL_REDIS_USER"
+    password: "$KUVEL_REDIS_PASS"
